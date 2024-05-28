@@ -34,7 +34,7 @@ VALUES ('Pepperoni & Cheese', 7.99),
        
 -- *************************************** /\ Table creation and data population code above /\ *******************************************
 
--- ************************************************* \/ Queries Q4 and Q5 below \/ ****************************************************** 
+-- ************************************************* \/ Queries Q4 and Q5 below \/ ******************************************************* 
 
 -- Q4:
 SELECT customer AS Customer, sum(price) AS Total_Amount FROM orders JOIN pizzas GROUP BY customer;
