@@ -51,7 +51,7 @@ VALUES (11, 'Pepperoni & Cheese', 7.99),
        (14, 'Hawaiian ', 12.99);
 
 
--- *** Q4 ***
+-- ********* Question 4 query below *********
 
 SELECT 
 	customers.customer_name, 
@@ -64,12 +64,13 @@ JOIN
 	pizzas ON orders.dish_id = pizzas.dish_id
 GROUP BY 
 	customers.customer_name;
+    
 
--- *** Q5 ***
+-- ********* Question 5 query below *********
 
 SELECT 
 	customers.customer_name, 
-    orders.order_date_time, 
+    (SELECT DATE(orders.order_date_time)) AS date_only, 
     SUM(pizzas.dish_price) AS total_amount
 FROM 
 	customers 
